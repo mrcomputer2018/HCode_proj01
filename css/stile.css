@@ -1,0 +1,397 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-size: 1em; /* EM - medida relativa se ajusta automaticamente de tamanho */
+}
+@font-face {
+    /* 7 - Ativando a fonte light */
+    font-family: "OpenSans-light";
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-size: 1em; 
+}
+header {
+    /* largura maxima */
+    width: 100%;
+    height:150px;
+    background-color: rgba(91, 41, 154, .8);
+    /* Trazendo o header para cima do banner */
+    z-index: 2;
+    position: relative;
+
+}
+header .header-black {
+    background-color: black;
+    height: 40px;
+}
+header .header-black li {
+    background-image: url("../img/clubs.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 4px 8px;
+}
+header .header-black li.club-01 {
+    background-position: 0px 0px;
+}
+header .header-black li.club-02 {
+    background-position: -48px 0px;
+}
+header .header-black li.club-03 {
+    background-position: -96px 0px;
+}
+header .header-black li.club-04 {
+    background-position: -141px 0px;
+}
+header .header-black li.club-05 {
+    background-position: -190px 0px;
+}
+header .header-black li.club-06 {
+    background-position: -240px 0px;
+}
+header .header-black li.club-07 {
+    background-position: -287px 0px;
+}
+header .header-black li.club-08 {
+    background-position: -332px 0px;
+}
+header .header-black li.club-09 {
+    background-position: -378px 0px;
+}
+header .header-black li.club-10 {
+    background-position: -428px 0px;
+}
+header .header-black li.club-11 {
+    background-position: -476px 0px;
+}
+header .header-black li.club-12 {
+    background-position: -526px 0px;
+}
+header .header-black li.club-13 {
+    background-position: -578px 0px;
+}
+header .header-black li.club-14 {
+    background-position: -628px 0px;
+}
+header .header-black li.club-15 {
+    background-position: -672px 0px;
+}
+header .header-black li.club-16 {
+    background-position: -718px 0px;
+}
+header .header-black li.club-17 {
+    background-position: -764px 0px;
+}
+header .header-black li.club-18 {
+    background-position: -808px 0px;
+}
+header .header-black li.club-19 {
+    background-position: -854px 0px;
+}
+header .header-black li.club-20 {
+    background-position: -900px 0px;
+}
+
+header .header-black li a {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+/* criando estilo para toda classe container dentro header */
+header .container{
+    position: relative;
+}
+header #logotipo {
+    /* Imagem ficandoa cima do header */
+    position: absolute;
+    top: 20px;
+}
+#menu {
+    margin: 32px 0;
+    /* para poder alinhar o menu a direita */
+    position: absolute;
+    right: 0;
+}
+/* ID - nome de ID nao pode se repetir */
+#menu li {
+    display: inline-block; /* bloqueio da linha de tela */
+    font-family:'Open Sans', sans-serif;
+}
+#menu li.search input {
+    background-color: #5c2090;
+    color: #fff; /* cor da fonte do search */
+    border: none; /* retirada da borda da caixa */
+    height: 30px;
+}
+#menu li.search ::-webkit-input-placeholder {
+    color: #fff; /* para mudar a cor do search */
+}
+#menu li.search button {
+   height: 26px;
+   border: none;
+   position: relative;
+   right: 3px;
+   background-color: #5c2090
+}   
+/* mexer no icone de procura */
+#menu li.search button i{
+    font-size: 16px;
+    border: none;
+    color: rgba(255, 255, 255, .5);
+ }
+#menu li a { /* adicionado A - para subescrever a cor padrao do navegador */
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 25px;
+}
+#banner {
+    width: 100%;
+    height: 720px;
+    position: relative;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+     /* 2 - para subir mais ainda o banner */
+    background-position: 0px -100px;
+    /* 1 - para subir o banner */
+    top: -110px; 
+}
+#banner h1 {
+    /* 3 - para nao empurar o banner para baixo */
+    top: 300px;
+    font-size: 92px;
+    /* 6 - mudanca da fonte */
+    font-family: "OpenSans-light";
+    position: relative;
+    color: #fff;
+    /* 5 - sombra no texto */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
+    /* 9 - Deslocando o texto */
+    margin-left: 50px;
+}
+#banner h1 small {
+    font-size: 32px;
+    /* 8 - Aplicando ao texo a fonte light e colocando bold (negrito)*/
+    font-family: 'Open Sans';
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
+    /* 4 - para se comportar como um div e descer */
+    display: block;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#news{
+    /* 12 -acerto da altura de LATEST */
+    position: relative;
+    top: -110px;
+}
+/* 10 - Fazendo as configuracaoes de h2 */
+#news h2, #call-to-action h2 {
+    color: #5c2090;
+    font-family: "OpenSans-light";
+    font-size: 48px;
+    /* 11 - Transforma o texto em maiusculo */
+    text-transform: uppercase;
+}
+/* Linha abaixo de LATEST */
+#news hr {
+    border: #fde192 solid 3px;
+    width: 200px;
+    margin: 0 auto;
+}
+#news .thumbmails {
+    margin-top: 20px;
+}
+#news .thumbmails h3 {
+    color: #5c2090;
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+}
+#news .thumbmails time {
+    color: #a7a7a7;
+    font-size: 18px;
+    font-family: 'Open Sans';
+}
+#estatisticas {
+    background-color: #5c2090;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+#estatisticas p {
+    color: #fde092;
+    text-transform: uppercase;
+    font-family: "OpenSans-light";
+    font-size: 64px;
+    /* Centralizar os dados estatisticos */
+    margin-top: 36px;
+}
+#estatisticas p small {
+    color: #fff;
+    font-size: 24px;
+    /* Torna o elemento com um bloco e quebra a linha */
+    display: block;
+}
+#call-to-action {
+    text-align: center;
+}
+#call-to-action h2 {
+    font-size: 45px;
+    text-align: center;
+    margin: 70px 0 10px 0px;
+}
+#call-to-action hr {
+    border: #fde192 solid 3px;
+    width: 200px;
+    margin: 0 auto;
+    
+}
+#call-to-action p {
+    color: #656565;
+    margin: 60px;
+}
+#call-to-action .btn-roxo {
+    color: #fff;
+    background-color: #5e299a;
+    border-color: #5e299a;
+    /* definindo a largura e altura do botton */
+    min-width: 164px;
+    height: 44px;
+    margin-right: 50px;
+}
+#call-to-action .btn-amarelo {
+    color: #000;
+    background-color:  #fde192;
+    border-color: #fde192;
+    min-width: 164px;
+    height: 44px;
+}
+footer {
+    margin-top: 110px;
+}
+footer .row {
+    width: 100%;
+}
+footer .row p{
+    /* para alinhar o texto na area cixa escuro */
+    line-height: 64px;
+    /* Tira a margem branca do final */
+    margin-bottom: 0;
+}
+footer .row-cinza-claro {
+    height: 200px;
+    background-color: #171f26;
+}
+footer .row-cinza-escuro {
+    height: 60px;
+    background-color: #11171d;
+    /* Criando a linha de divisao do cinza escuro para o claro */
+    border-top: #242037 1px solid;
+ }
+ footer .text-left {
+    color: #623291;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 16px;     
+}
+footer .text-right {
+    color: #623291;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 14px;
+}
+footer #logotipo-rodape {
+    margin-top: 28px;
+}
+footer .col-popular-post, .col-links, .col-get-in-touch {
+    margin-top: 40px;
+}
+footer .col-md-10 h4 {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 17px;
+    border-bottom: #242d37 1px solid;
+}
+footer .col-md-10 li {
+    margin-left: -40px;
+}
+footer .col-md-10 h5 {
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+footer .col-md-10 time {
+    color: #fde092;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+footer .col-md-10 ul {
+    /* Tira a bola do inicio da lista */
+    list-style: none;
+}
+footer .col-md-10 .fa {
+    margin: 0 6px;
+    color: #fff;
+    
+}
+footer .col-get-in-touch a {
+    color: #666;
+    font-family: Arial;
+    font-size: 14px;
+}
+footer .col-get-in-touch address {
+    color: #666;
+    font-family: Arial;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+footer .col-get-in-touch p {
+    color: #666;
+    font-family: Arial;
+    font-size: 14px;
+}
+footer .col-get-in-touch address span {
+    display: inline-block;
+}
+/* para resolver o icone que ficou baixo */
+footer .col-get-in-touch address i {
+    position: relative;
+    top: -16px;
+}
+footer .col-get-in-touch i {
+    color: #989898;
+    font-size: 20px;
+    margin: 0 6px;
+}
+footer .col-get-in-touch p {
+   line-height: 20px;
+}
+footer .list-socials {
+    margin-top: 4px;    
+}
+/* para alinhar todos os icones das redes sociais */
+footer .list-socials li {
+    display: inline-block;
+    margin-left: -35px;
+    margin-right: 40px;
+}
+footer .list-socials a {
+    display: block;
+    border: #989898 1px solid;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    /* para deixar aborda redonda */
+    border-radius: 14px;
+    text-align: center;
+}
+ooter .list-socials i {
+    font-size: 16px;
+    margin: 7px 8px;
+}
