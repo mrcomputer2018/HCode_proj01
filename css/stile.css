@@ -115,6 +115,11 @@ header #logotipo {
     display: inline-block; /* bloqueio da linha de tela */
     font-family:'Open Sans', sans-serif;
 }
+/* Efeito na caixa do search */
+#menu li.search.ativo input{
+    width: 300px;
+    transition: 1s;
+}
 #menu li.search input {
     background-color: #5c2090;
     color: #fff; /* cor da fonte do search */
@@ -129,7 +134,9 @@ header #logotipo {
    border: none;
    position: relative;
    right: 3px;
-   background-color: #5c2090
+   background-color: #5c2090;
+   /* Efeito com Jquery */
+   transition: 1s;
 }   
 /* mexer no icone de procura */
 #menu li.search button i{
@@ -165,6 +172,13 @@ header #logotipo {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
     /* 9 - Deslocando o texto */
     margin-left: 50px;
+    /* Efeito de saida do mouse do logotipo */
+    transition: 1s;
+}
+/* Adicionando efeito ao site com Jquery */
+#banner h1.efeito {
+    color: #623291;
+    transition: 1s;
 }
 #banner h1 small {
     font-size: 32px;
@@ -377,6 +391,8 @@ footer .list-socials {
 }
 /* para alinhar todos os icones das redes sociais */
 footer .list-socials li {
+    font-size: 16px;
+    margin: 7px 8px;
     display: inline-block;
     margin-left: -35px;
     margin-right: 40px;
@@ -390,8 +406,4 @@ footer .list-socials a {
     /* para deixar aborda redonda */
     border-radius: 14px;
     text-align: center;
-}
-ooter .list-socials i {
-    font-size: 16px;
-    margin: 7px 8px;
 }
