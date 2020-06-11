@@ -125,22 +125,23 @@ header #logotipo {
     color: #fff; /* cor da fonte do search */
     border: none; /* retirada da borda da caixa */
     height: 30px;
+    transition: 1s;
 }
 #menu li.search ::-webkit-input-placeholder {
     color: #fff; /* para mudar a cor do search */
 }
 #menu li.search button {
-   height: 26px;
+   height: 30px;
    border: none;
    position: relative;
-   right: 3px;
+   right: -8px;
    background-color: #5c2090;
    /* Efeito com Jquery */
    transition: 1s;
 }   
 /* mexer no icone de procura */
 #menu li.search button i{
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     color: rgba(255, 255, 255, .5);
  }
@@ -228,6 +229,13 @@ header #logotipo {
     color: #a7a7a7;
     font-size: 18px;
     font-family: 'Open Sans';
+    margin-left: 10px;
+}
+#news .thumbmails .item-inner {
+    padding: 10px;
+}
+#news .thumbmails .item-inner img {
+    width: 100%;
 }
 #estatisticas {
     background-color: #5c2090;

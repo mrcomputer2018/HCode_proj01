@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Orlando City</title>
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/owlcarousel/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="lib/owlcarousel/dist/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/stile.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css " >
@@ -55,7 +57,7 @@
                             <li><a href="#">Schedule</a></li>
                             <li class="search">
                                 <div class="input-group">
-                                    <input type="text" id="input-search" class="form-control" placeholder="Search...">
+                                    <input type="text" id="input-search" class="form-control btn-outline-light" placeholder="Search...">
                                         <span class="input-group-btn">
                                             <button class="btn btn-default btn-outline-light" type="button">
                                                 <i class="fa fa-search"></i>
@@ -95,26 +97,48 @@
                     </div>
                 </div>
 
-                <div class="row thumbmails text-md-center">
-                    <div class="col-md-3">
-                        <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
-                        <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
-                        <time>December 21, 2015</time>
+                <div class="row thumbmails owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
-                        <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
-                        <time>December 21, 2015</time>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
-                        <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
-                        <time>December 21, 2015</time>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
-                        <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
-                        <time>December 21, 2015</time>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb.jpg" alt="imagem da noticia">
+                            <h3>Orlando City Acquires Goalkeeper - Joe Bendik from Toronto FC</h3>
+                            <time>December 21, 2015</time>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,7 +287,8 @@
         </footer>
 
         <!-- scripts -->
-        <script type="text/javascript" src="lib/jquery/jquery-3.5.0.min.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/owlcarousel/dist/owl.carousel.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
         <script>
@@ -277,6 +302,30 @@
                     $("li.search").addClass("ativo");
                 }).on("blur", function(){
                     $("li.search").removeClass("ativo");
+                });
+                $(".thumbmails").owlCarousel({
+                    loop:true,
+                    margin:10,
+                    // nav:true,
+                    // navText: ["Anterior","Proximo"],
+                    responsive: {
+                        // breakpoint from 0 up
+                        0 : {
+                            item: 1
+                        },
+                        // breakpoint from 480 up
+                        480 : {
+                            item: 3
+                        },
+                        // breakpoint from 768 up
+                        768 : {
+                            item: 4
+                        },
+                        // breakpoint from 1200 up
+                        1200 : {
+                            item: 6
+                        }
+                    },
                 });
             });   
         </script> 
