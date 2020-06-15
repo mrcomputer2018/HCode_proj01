@@ -415,3 +415,10 @@ footer .list-socials a {
     border-radius: 14px;
     text-align: center;
 }
+.owl-prev,
+.owl-next {
+    position: relative;
+    left: 0px;
+    display: inline;
+    margin:30px ;
+}
