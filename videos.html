@@ -76,7 +76,64 @@
 
         <!-- -->
         <section>
-           
+             <!-- Videos -->
+             <div id="call-to-action" class="container">
+                <div class="row justify-content-md-center">
+                    <h2>Videos</h2>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+                <div class="row justify-content-md-center">
+                    <!-- Videos-->
+                    <!-- AUTOPLAY - para executar automaticamente o video -->
+                    <!-- COPNTROLS _ adiciona os controles de video -->
+                    <!-- POSTER - Colocar uma imagem para o inicio do video -->
+                    <!-- <audio src=""></audio> - mesmos atributos que video -->
+                    <video id="videos" src="/mp4/highlights.mp4" controls poster="img/highlights.jpg">
+                    </video>
+                </div>
+            </div>
+            
+            <!-- Criando a playlist de videos do site-->
+            <!-- ROW - Adiciono uma linha -->
+            <div id="news" class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="text-md-center">More Videos</h2>
+                        <hr>        
+                    </div>
+                </div>
+
+                <div class="row thumbmails owl-carousel owl-theme">
+                    <div class="item" data-video="highlights">
+                        <div class="item-inner">
+                            <img src="img/highlights.jpg" alt="video da noticia">
+                            <h3>Highlights</h3>
+                        </div>
+                    </div>
+                    <div class="item" data-video="Orlando_City_Foundation_2015">
+                        <div class="item-inner">
+                            <img src="img/Orlando_City_Foundation_2015.jpg" alt="video da noticia 2">
+                            <h3>Orlando City Foundation 2015</h3>
+                        </div>
+                    </div>
+                    <div class="item" data-video="highlights">
+                        <div class="item-inner">
+                            <img src="img/highlights.jpg" alt="video da noticia">
+                            <h3>Highlights</h3>
+                        </div>
+                    </div>
+                    <div class="item" data-video="Orlando_City_Foundation_2015">
+                        <div class="item-inner">
+                            <img src="img/Orlando_City_Foundation_2015.jpg" alt="video da noticia 2">
+                            <h3>Orlando City Foundation 2015</h3>
+                        </div>
+                    </div>
+                </div>
         </section>
         
         <!-- Rodape -->
@@ -183,17 +240,14 @@
         <script type="text/javascript" src="lib/owlcarousel/dist/owl.carousel.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/efeito.js"></script>
         <script>
-            $(Document).ready(function(){
-                $("#logotipo").on("mouseover", function(){
-                    $("#banner h1").addClass("efeito");
-                }).on("mouseout", function(){
-                    $("#banner h1").removeClass("efeito");
-                });
-                $("#input-search").on("focus", function(){
-                    $("li.search").addClass("ativo");
-                }).on("blur", function(){
-                    $("li.search").removeClass("ativo");
+            $(function(){
+                $(".thumbmails .item").on("click", function(){
+                    $("video").attr({
+                        "src":"mp4/"+$(this).data("video")+".mp4",
+                        "poster":"img/"+$(this).data("video")+".jpg"
+                    });
                 });
                 $(".thumbmails").owlCarousel({
                     loop:true,

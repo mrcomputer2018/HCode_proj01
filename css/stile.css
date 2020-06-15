@@ -422,3 +422,7 @@ footer .list-socials a {
     display: inline;
     margin:30px ;
 }
+/* Definindo um tamanho par o video */
+video {
+    width: 70%;
+}
