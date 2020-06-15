@@ -92,6 +92,8 @@
                     <!-- <audio src=""></audio> - mesmos atributos que video -->
                     <video id="videos" src="/mp4/highlights.mp4" controls poster="img/highlights.jpg">
                     </video>
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                    <button type="button" id="btn-play-pause" class="btn btn-success">Play</button>
                 </div>
             </div>
             
@@ -103,7 +105,7 @@
                         
                     </div>
                     <div class="col-md-4">
-                        <h2 class="text-md-center">More Videos</h2>
+                        <h2 id="texto-videos" class="text-md-center">More Videos</h2>
                         <hr>        
                     </div>
                 </div>
@@ -249,6 +251,28 @@
                         "poster":"img/"+$(this).data("video")+".jpg"
                     });
                 });
+                // Mexer no volume via Jquery
+                $("#volume").on("mousemove", function(){
+                    $("video")[0].volume = parseFloat($(this).val());
+                });
+                // Controle do play e stop
+                $("#btn-play-pause").on("click", function(){
+                    // Fazendo o botao funcionar
+                    var video = $("video")[0];
+                    //  Mudanca de texto de play para stop 
+                    if($(this).hasClass("btn-success")) 
+                    {
+                        $(this).text("stop");
+                        video.play();
+                    }
+                    else {
+                        $(this).text("play");
+                        video.pause();    
+                    } 
+                    // Mudanca de cor no botao
+                    $(this).toggleClass("btn-success btn-danger"); 
+                });
+                // Thumbmails dos videos
                 $(".thumbmails").owlCarousel({
                     loop:true,
                     margin:10,
